@@ -1,0 +1,246 @@
+html {
+	font-size: 25px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+	background: #0a2540;
+}
+
+/* Global */
+.page {
+	min-height: 100vh;
+}
+
+.landing {
+	background: #fff;
+}
+
+.kku-title {
+	font-family: 'Playfair Display', serif;
+	line-height: 1.06;
+	word-break: break-word;
+}
+
+.kku-title-size-1 {
+	font-size: 3.2rem;
+}
+
+.kku-title-size-2 {
+	font-size: 1.68rem;
+	margin-bottom: 1rem;
+}
+
+.kku-title-size-3 {
+	font-size: 1rem;
+}
+
+/* Landing Content */
+.landing-content {
+	display: flex;
+	align-items: center;
+}
+
+.kku-paragraph {
+	font-size: 1rem;
+	line-height: 1.4;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+.kku-paragraph-lead {
+	font-weight: 700;
+}
+
+.landing-content-description {
+	max-width: 80%;
+}
+
+.landing-content-cta button {
+	color: #fff;
+	background: rgb(82, 113, 255);
+	border: none;
+	padding: 0.56rem 0.9rem;
+	font-size: 1rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.landing-content-title {
+	margin-bottom: 1.52rem;
+}
+
+#landing-image {
+	object-fit: fill;
+}
+
+.landing-content .right {
+	display: flex;
+	align-items: center;
+	margin-left: -3.6rem;
+}
+
+/* what's inside */
+
+.whats-inside {
+	background: rgb(246, 249, 252);
+	display: flex;
+	align-items: center;
+}
+
+.whats-inside-header {
+	padding: 1.28rem 0 0.72rem 0;
+}
+
+/* product-list */
+
+.product-list .product-name {
+	font-size: 1rem;
+}
+
+.product-list-title {
+	margin-bottom: 1rem;
+}
+
+.products-row-1 {
+	margin-bottom: 1.28rem !important;
+}
+.why-should-you-care {
+	background: #0a2540;
+	color: hsla(0, 0%, 90%, 1);
+	display: flex;
+	align-items: center;
+}
+.why-should-you-care-title,
+.products-title {
+	text-align: center;
+}
+.reasons {
+	margin-top: 1rem;
+}
+.why-should-you-care-content {
+	justify-content: center;
+}
+.product {
+	background: rgb(246, 249, 252);
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.product .container .columns {
+	justify-content: center;
+}
+.level-item {
+	flex-shrink: 1;
+}
+.product-description-left {
+	flex-grow: 2;
+}
+.price {
+	display: block;
+	margin: 0;
+	text-align: right;
+	font-style: underline;
+}
+/* this is a duplicate style. TODO: combain this */
+
+.buy-now {
+	color: #fff;
+	background: rgb(82, 113, 255);
+	border: none;
+	padding: 0.48rem;
+	font-weight: 700;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 0.7rem;
+	padding: 0;
+	padding-top: 0;
+	font-size: 0.7rem;
+}
+.product-box-wrapper {
+	box-shadow: 0.04rem 0.04rem 0.48rem rgba(0, 0, 0, 0.1);
+	background: hsla(0, 0%, 90%, 1);
+	border-radius: 0.12rem;
+	padding: 0.7rem;
+}
+
+.products-title {
+	color: hsla(0, 0%, 90%, 1);
+}
+
+.product-alternate {
+	/* background: #0a2540; */
+	/* background: hsl(210 73% 22%); */
+	background: #0a2540;
+}
+
+.kku-footer {
+	/* background: rgb(246, 249, 252); */
+	background: #0a2540;
+	color: hsla(0, 0%, 90%, 1);
+	text-align: center;
+}
+
+.footer-title {
+	color: hsla(0, 0%, 90%, 1);
+}
+
+.last {
+	padding-bottom: 4rem;
+}
+
+.why-should-you-care-section {
+	padding-bottom: 0;
+}
+
+.product-title {
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.the-cause-wrapper {
+	justify-content: center;
+}
+
+.the-cause-description {
+	opacity: 0.5;
+	text-align: center;
+	font-style: italic;
+	line-height: 1.6;
+	font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.kku-title-size-1 {
+		font-size: 2rem;
+	}
+
+	.landing-content-description {
+		max-width: 100%;
+	}
+
+	.buttons {
+		justify-content: center;
+	}
+
+	.buttons button {
+		width: 100%;
+		margin-right: 0px !important;
+	}
+
+	#landing-image {
+		display: none;
+	}
+
+	.columns {
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 0;
+		margin-bottom: 0 !important;
+	}
+
+	.kku-footer {
+		font-size: 0.8rem;
+	}
+}
