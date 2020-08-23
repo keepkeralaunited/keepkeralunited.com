@@ -1,5 +1,6 @@
 html {
 	font-size: 25px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -209,6 +210,10 @@ body {
 	font-style: italic;
 	line-height: 1.6;
 	font-size: 0.8rem;
+}
+
+.social span.icon {
+	color: hsla(0, 0%, 90%, 1);
 }
 
 @media only screen and (max-width: 768px) {
