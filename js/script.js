@@ -12,3 +12,12 @@ document
 			navbarMenu.classList.remove('is-active')
 		}
 	})
+
+function toggleProductList(productListId) {
+	let element = document.getElementById(productListId)
+	if (element.style.display) {
+		element.style.display = null
+	} else {
+		element.style.display = 'initial'
+	}
+}
