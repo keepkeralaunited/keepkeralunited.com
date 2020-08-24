@@ -55,7 +55,8 @@ body {
 	font-weight: 700;
 	cursor: pointer;
 }
-.landing-content-cta a:hover {
+.landing-content-cta a:hover,
+.buy-now:hover {
 	color: #fff;
 	background: hsl(229 100% 67% / 1);
 }
@@ -75,6 +76,8 @@ body {
 	background: rgb(246, 249, 252);
 	display: flex;
 	align-items: center;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
 .whats-inside-header {
@@ -212,7 +215,23 @@ body {
 	display: none;
 }
 
-@media only screen and (max-width: 768px) {
+.navbar-brand {
+	align-items: center;
+	margin-left: 0 !important;
+}
+
+.landing-content .container.page {
+	display: flex;
+	flex-direction: column;
+}
+
+.landing-content .main-content {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
 	.kku-title-size-1 {
 		font-size: 1.6rem;
 	}
@@ -305,5 +324,9 @@ body {
 
 	.expand-icon {
 		display: initial;
+	}
+
+	.navbar-brand {
+		padding-left: 0.5rem;
 	}
 }
