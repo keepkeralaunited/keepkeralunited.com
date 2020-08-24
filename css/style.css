@@ -126,14 +126,11 @@ body {
 .level-item {
 	flex-shrink: 1;
 }
-.product-description-left {
-	flex-grow: 2;
-}
+
 .price {
 	display: block;
 	margin: 0;
-	text-align: right;
-	font-style: underline;
+	font-weight: 700;
 }
 /* this is a duplicate style. TODO: combain this */
 
@@ -231,6 +228,13 @@ body {
 	align-items: center;
 }
 
+.product-edition {
+	font-weight: 400;
+	font-size: 0.7rem !important;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
 @media only screen and (max-width: 1024px) {
 	.kku-title-size-1 {
 		font-size: 1.6rem;
@@ -270,10 +274,6 @@ body {
 
 	.products-title {
 		font-size: 1.1rem;
-	}
-
-	.price {
-		text-align: left;
 	}
 
 	.landing-content-cta .button {
