@@ -8,6 +8,19 @@ body {
 	/* background: #0a2540; */
 }
 /* Global */
+.footer-actions {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.footer-actions a {
+	font-size: 0.7rem;
+	margin-left: 1rem;
+	color: #fff;
+	margin: 0;
+	text-decoration: underline;
+}
+
 .page {
 	min-height: 100vh;
 }
@@ -279,6 +292,10 @@ figure.home-image img,
 @media only screen and (max-width: 1024px) {
 	.kku-title-size-1 {
 		font-size: 1.6rem;
+	}
+
+	.footer-actions a {
+		display: block;
 	}
 
 	.image-overlay {
