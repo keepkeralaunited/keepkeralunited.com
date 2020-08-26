@@ -235,6 +235,23 @@ body {
 	margin-bottom: 0.5rem;
 }
 
+.home-image img {
+	object-fit: cover;
+	min-height: 70vh;
+}
+
+.hero-title {
+	font-size: 1.7rem;
+	font-weight: 700;
+	line-height: 1.04;
+	margin-top: 1rem;
+}
+
+.navbar-item {
+	font-weight: 700;
+	font-size: 0.7rem;
+}
+
 @media only screen and (max-width: 1024px) {
 	.kku-title-size-1 {
 		font-size: 1.6rem;
@@ -281,8 +298,29 @@ body {
 		width: 100%;
 	}
 
-	.landing-content {
+	/* .landing-content {
 		padding: 1rem;
+	} */
+
+	.image-column {
+		order: 2;
+	}
+
+	.image-description {
+		order: 1;
+		text-align: center;
+	}
+
+	.hero-text {
+		font-size: 0.8rem;
+	}
+
+	.hero-title {
+		font-size: 1.3rem;
+	}
+
+	.see-products-button {
+		margin-top: 0.7rem;
 	}
 
 	.landing-content .left {
