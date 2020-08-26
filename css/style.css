@@ -252,9 +252,37 @@ body {
 	font-size: 0.7rem;
 }
 
+figure.home-image {
+	position: relative;
+	display: flex;
+}
+
+figure.home-image img,
+.image-overlay {
+	border-radius: 1rem;
+}
+
+.image-overlay {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: #122323;
+	position: absolute;
+	top: 0;
+	opacity: 0.4;
+}
+
+.see-products-button {
+	margin-top: 1.5rem;
+}
+
 @media only screen and (max-width: 1024px) {
 	.kku-title-size-1 {
 		font-size: 1.6rem;
+	}
+
+	.image-overlay {
+		display: block;
 	}
 
 	.landing-content-description {
@@ -337,6 +365,12 @@ body {
 		flex-direction: column;
 		background: rgb(246, 249, 252);
 		border-radius: 20px;
+		position: relative;
+	}
+
+	.image-description {
+		position: absolute;
+		color: #fff;
 	}
 
 	.product-list {
