@@ -14,10 +14,27 @@ document
 	})
 
 function toggleProductList(productListId) {
-	let element = document.getElementById(productListId)
+	toggleElement(productListId, 'initial')
+}
+
+function toggleTags(packageName) {
+	console.log('Calling This')
+	toggleElement(packageName, 'flex')
+}
+
+function toggleElement(elementId, display) {
+	let element = document.getElementById(elementId)
+	toggleDisplay(element, display)
+}
+
+function toggleDisplay(element, display) {
+	console.log(element)
+	console.log(element.style.display)
+
 	if (element.style.display) {
 		element.style.display = null
 	} else {
-		element.style.display = 'initial'
+		console.log('We are here')
+		element.style.display = display
 	}
 }

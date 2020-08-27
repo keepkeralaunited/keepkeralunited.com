@@ -8,6 +8,7 @@ body {
 	/* background: #0a2540; */
 }
 /* Global */
+
 .footer-actions {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
@@ -248,6 +249,25 @@ body {
 	margin-bottom: 0.5rem;
 }
 
+#essentials-pack-tags,
+#for-babies-pack-tags,
+#premium-pack-tags {
+	display: none;
+}
+
+.tags {
+	margin: 0.5rem 0 !important;
+}
+
+.tags .tag {
+	font-size: 0.5rem !important;
+	margin-bottom: 0.3rem !important;
+}
+
+.tags .tag:not(:last-child) {
+	margin-right: 0.3rem !important;
+}
+
 .home-image img {
 	object-fit: cover;
 	min-height: 70vh;
@@ -289,9 +309,26 @@ figure.home-image img,
 	margin-top: 1.5rem;
 }
 
+.product-edition span.icon {
+	padding-left: 0.5rem;
+}
+
+.product-edition > span {
+	position: relative;
+}
+
+.tooltip {
+	font-size: 0.5rem !important;
+	margin-bottom: 0.5rem;
+}
+
 @media only screen and (max-width: 1024px) {
 	.kku-title-size-1 {
 		font-size: 1.6rem;
+	}
+
+	.product-box {
+		margin: 1rem;
 	}
 
 	.footer-actions a {
