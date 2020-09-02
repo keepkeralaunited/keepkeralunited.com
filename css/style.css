@@ -311,6 +311,7 @@ figure.home-image img,
 
 .product-edition span.icon {
 	padding-left: 0.5rem;
+	cursor: pointer;
 }
 
 .product-edition > span {
