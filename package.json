@@ -26,7 +26,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"webpack": "webpack --mode=development",
 		"webpack-prod": "webpack --mode=production",
-		"serve": "netlify dev"
+		"build": "webpack --mode=production"
 	},
 	"author": "Akash Mohan",
 	"license": "ISC",
