@@ -81,13 +81,9 @@ function toggleElement(elementId, display) {
 }
 
 function toggleDisplay(element, display) {
-	console.log(element)
-	console.log(element.style.display)
-
 	if (element.style.display) {
 		element.style.display = null
 	} else {
-		console.log('We are here')
 		element.style.display = display
 	}
 }
