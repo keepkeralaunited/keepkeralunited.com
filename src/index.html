@@ -28,18 +28,11 @@
 			content="Get a gift box to support struggling small businesses.
 		"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-		/>
+		<link rel="stylesheet" href="./css/bulma.min.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<script
-			src="https://kit.fontawesome.com/ab420ce454.js"
-			crossorigin="anonymous"
-		></script>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
@@ -57,6 +50,7 @@
 		</script>
 
 		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/icons.css" />
 		<title>
 			Keep Kerala United | Gift Boxes To Support Struggling Small
 			Bussinesses
@@ -73,10 +67,18 @@
 					>
 						<div class="navbar-brand">
 							<figure class="image is-64x64">
-								<img
-									src="./img/logo_transparant.png"
-									alt="Keep Kerala United"
-								/>
+								<picture>
+									<source
+										srcset="./img/logo_transparant.webp"
+									/>
+									<source
+										srcset="./img/logo_transparant.png"
+									/>
+									<img
+										src="./img/logo_transparant.png"
+										alt="Keep Kerala United"
+									/>
+								</picture>
 							</figure>
 							<a
 								role="button"
@@ -115,11 +117,15 @@
 					>
 						<div class="column image-column is-one-third-desktop">
 							<figure class="home-image">
-								<img
-									src="img/kerala.png"
-									alt="Small Bussiness Image"
-									class="image"
-								/>
+								<picture>
+									<source srcset="./img/kerala.webp" />
+									<source srcset="./img/kerala.png" />
+									<img
+										src="img/kerala.png"
+										alt="Small Bussiness Image"
+										class="image"
+									/>
+								</picture>
 								<div class="image-overlay"></div>
 							</figure>
 						</div>
@@ -169,10 +175,22 @@
 							<div class="product-box-wrapper">
 								<div class="product-box">
 									<figure>
-										<img
-											src="./img/default-edition-min.png"
-											alt="Keep Kerala United"
-										/>
+										<picture>
+											<source
+												srcset="
+													./img/default-edition-min.webp
+												"
+											/>
+											<source
+												srcset="
+													./img/default-edition-min.png
+												"
+											/>
+											<img
+												src="./img/default-edition-min.png"
+												alt="Keep Kerala United"
+											/>
+										</picture>
 										<figcaption>
 											<h1 class="product-title">
 												Keep Kerala United Giftbox
@@ -183,9 +201,9 @@
 												Essentials
 												<span
 													class="icon"
-													onclick="toggleTags('essentials-pack-tags')"
+													id="essentials-question-circle"
 													><i
-														class="fa fa-question-circle"
+														class="icon-question-circle"
 													></i>
 												</span>
 											</p>
@@ -246,10 +264,22 @@
 							<div class="product-box-wrapper">
 								<div class="product-box">
 									<figure>
-										<img
-											src="./img/babies-edition-min.png"
-											alt="Keep Kerala United"
-										/>
+										<picture>
+											<source
+												srcset="
+													./img/babies-edition-min.webp
+												"
+											/>
+											<source
+												srcset="
+													./img/babies-edition-min.png
+												"
+											/>
+											<img
+												src="./img/babies-edition-min.png"
+												alt="Keep Kerala United"
+											/>
+										</picture>
 										<figcaption>
 											<h1 class="product-title">
 												Keep Kerala United Giftbox
@@ -260,9 +290,9 @@
 												For Babies
 												<span
 													class="icon"
-													onclick="toggleTags('for-babies-pack-tags')"
+													id="for-babies-question-circle"
 													><i
-														class="fa fa-question-circle"
+														class="icon-question-circle"
 													></i>
 												</span>
 											</p>
@@ -299,10 +329,22 @@
 							<div class="product-box-wrapper">
 								<div class="product-box">
 									<figure>
-										<img
-											src="./img/premium-edition-min.png"
-											alt="Keep Kerala United"
-										/>
+										<picture>
+											<source
+												srcset="
+													./img/premium-edition-min.webp
+												"
+											/>
+											<source
+												srcset="
+													./img/premium-edition-min.png
+												"
+											/>
+											<img
+												src="./img/premium-edition-min.png"
+												alt="Keep Kerala United"
+											/>
+										</picture>
 										<figcaption>
 											<h1 class="product-title">
 												Keep Kerala United Giftbox
@@ -313,9 +355,9 @@
 												Premium
 												<span
 													class="icon"
-													onclick="toggleTags('premium-pack-tags')"
+													id="premium-question-circle"
 													><i
-														class="fa fa-question-circle"
+														class="icon-question-circle"
 													></i>
 												</span>
 											</p>
@@ -403,9 +445,9 @@
 									<span
 										data-open="local-taste-product-list"
 										class="icon expand-icon"
-										onclick="toggleProductList('local-taste-product-list')"
+										id="local-taste-caret"
 									>
-										<i class="fa fa-caret-down"></i>
+										<i class="icon-caret-down"></i>
 									</span>
 								</h3>
 								<ul
@@ -428,9 +470,9 @@
 									Art
 									<span
 										class="icon expand-icon"
-										onclick="toggleProductList('local-art-product-list')"
+										id="local-art-caret"
 									>
-										<i class="fa fa-caret-down"></i>
+										<i class="icon-caret-down"></i>
 									</span>
 								</h3>
 								<ul
@@ -453,8 +495,8 @@
 									Lifestyle
 									<span
 										class="icon expand-icon"
-										onclick="toggleProductList('local-lifestyle-product-list')"
-										><i class="fa fa-caret-down"></i
+										id="local-lifestyle-caret"
+										><i class="icon-caret-down"></i
 									></span>
 								</h3>
 								<ul
@@ -477,8 +519,8 @@
 									Skincare
 									<span
 										class="icon expand-icon"
-										onclick="toggleProductList('local-skincare-product-list')"
-										><i class="fa fa-caret-down"></i
+										id="local-skincare-caret"
+										><i class="icon-caret-down"></i
 									></span>
 								</h3>
 								<ul
@@ -500,8 +542,8 @@
 									Baby Items
 									<span
 										class="icon expand-icon"
-										onclick="toggleProductList('local-baby-items-product-list')"
-										><i class="fa fa-caret-down"> </i
+										id="local-baby-items-caret"
+										><i class="icon-caret-down"> </i
 									></span>
 								</h3>
 								<ul
@@ -528,8 +570,8 @@
 									Drinks
 									<span
 										class="icon expand-icon"
-										onclick="toggleProductList('local-drinks-product-list')"
-										><i class="fa fa-caret-down"></i
+										id="local-drinks-caret"
+										><i class="icon-caret-down"></i
 									></span>
 								</h3>
 								<ul
@@ -663,22 +705,22 @@
 			<div class="social">
 				<a href="https://instagram.com/keepkeralaunited">
 					<span class="icon">
-						<i class="fab fa-instagram"></i>
+						<i class="icon-instagram"></i>
 					</span>
 				</a>
 				<a href="https://facebook.com/keepkeralaunited">
 					<span class="icon">
-						<i class="fab fa-facebook"></i>
+						<i class="icon-facebook-square"></i>
 					</span>
 				</a>
 				<a href="https://twitter.com/KeepKerala">
 					<span class="icon">
-						<i class="fab fa-twitter"></i>
+						<i class="icon-twitter"></i>
 					</span>
 				</a>
 				<a href="https://wa.me/918086857986">
 					<span class="icon">
-						<i class="fab fa-whatsapp"></i>
+						<i class="icon-whatsapp"></i>
 					</span>
 				</a>
 			</div>
