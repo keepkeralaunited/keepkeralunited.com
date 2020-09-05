@@ -28,10 +28,7 @@
 			content="Get a gift box to support struggling small businesses.
 		"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-		/>
+		<link rel="stylesheet" href="./css/bulma.min.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@400;700&display=swap"
 			rel="stylesheet"
@@ -204,7 +201,7 @@
 												Essentials
 												<span
 													class="icon"
-													onclick="toggleTags('essentials-pack-tags')"
+													id="essentials-question-circle"
 													><i
 														class="icon-question-circle"
 													></i>
@@ -293,7 +290,7 @@
 												For Babies
 												<span
 													class="icon"
-													onclick="toggleTags('for-babies-pack-tags')"
+													id="for-babies-question-circle"
 													><i
 														class="icon-question-circle"
 													></i>
@@ -358,7 +355,7 @@
 												Premium
 												<span
 													class="icon"
-													onclick="toggleTags('premium-pack-tags')"
+													id="premium-question-circle"
 													><i
 														class="icon-question-circle"
 													></i>
@@ -448,6 +445,7 @@
 									<span
 										data-open="local-taste-product-list"
 										class="icon expand-icon"
+										id="local-taste-caret"
 										onclick="toggleProductList('local-taste-product-list')"
 									>
 										<i class="icon-caret-down"></i>
@@ -473,6 +471,7 @@
 									Art
 									<span
 										class="icon expand-icon"
+										id="local-art-caret"
 										onclick="toggleProductList('local-art-product-list')"
 									>
 										<i class="icon-caret-down"></i>
@@ -498,6 +497,7 @@
 									Lifestyle
 									<span
 										class="icon expand-icon"
+										id="local-lifestyle-caret"
 										onclick="toggleProductList('local-lifestyle-product-list')"
 										><i class="icon-caret-down"></i
 									></span>
@@ -522,6 +522,7 @@
 									Skincare
 									<span
 										class="icon expand-icon"
+										id="local-skincare-caret"
 										onclick="toggleProductList('local-skincare-product-list')"
 										><i class="icon-caret-down"></i
 									></span>
@@ -545,6 +546,7 @@
 									Baby Items
 									<span
 										class="icon expand-icon"
+										id="local-baby-items-caret"
 										onclick="toggleProductList('local-baby-items-product-list')"
 										><i class="icon-caret-down"> </i
 									></span>
@@ -573,6 +575,7 @@
 									Drinks
 									<span
 										class="icon expand-icon"
+										id="local-drinks-caret"
 										onclick="toggleProductList('local-drinks-product-list')"
 										><i class="icon-caret-down"></i
 									></span>
