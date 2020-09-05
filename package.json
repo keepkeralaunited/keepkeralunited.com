@@ -1,0 +1,44 @@
+{
+	"name": "keep-kerala-united-web",
+	"version": "0.0.1",
+	"description": "Keep Kerala United Website",
+	"main": "index.js",
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.11.6",
+		"@babel/preset-env": "^7.11.5",
+		"@fullhuman/postcss-purgecss": "^2.3.0",
+		"babel-loader": "^8.1.0",
+		"clean-webpack-plugin": "^3.0.0",
+		"css-loader": "^4.2.2",
+		"eslint": "7.8.1",
+		"extract-loader": "^5.1.0",
+		"file-loader": "^6.1.0",
+		"html-loader": "^1.3.0",
+		"mini-css-extract-plugin": "^0.11.0",
+		"postcss-loader": "^3.0.0",
+		"prettier": "2.1.1",
+		"style-loader": "^1.2.1",
+		"webpack": "4.44.1",
+		"webpack-cli": "3.3.12"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"webpack": "webpack --mode=development",
+		"webpack-prod": "webpack --mode=production",
+		"serve": "netlify dev"
+	},
+	"author": "Akash Mohan",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/keepkeralaunited/keepkeralaunited.com.git"
+	},
+	"keywords": [
+		"keep-kerala-united"
+	],
+	"bugs": {
+		"url": "https://github.com/keepkeralaunited/keepkeralaunited.com/issues"
+	},
+	"homepage": "https://github.com/keepkeralaunited/keepkeralaunited.com#readme"
+}
