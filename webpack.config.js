@@ -102,6 +102,18 @@ module.exports = {
 					},
 				},
 			},
+			{
+				test: /favicon.ico/,
+				exclude: /(node_modules)/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+						},
+					},
+				],
+			},
 		],
 	},
 	plugins: [
