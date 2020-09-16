@@ -1,7 +1,8 @@
 const fileLoader = {
 	loader: 'file-loader',
 	options: {
-		name: '[name].[ext]',
+		context: 'src',
+		name: '[path][name].[ext]',
 	},
 }
 
