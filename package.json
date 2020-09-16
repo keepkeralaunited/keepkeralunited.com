@@ -20,13 +20,15 @@
 		"prettier": "2.1.1",
 		"style-loader": "^1.2.1",
 		"webpack": "4.44.1",
-		"webpack-cli": "3.3.12"
+		"webpack-cli": "3.3.12",
+		"webpack-merge": "^5.1.4"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"webpack": "webpack --mode=development",
 		"webpack-prod": "webpack --mode=production",
-		"build": "webpack --mode=production"
+		"build": "webpack --mode=production",
+		"dev:std": "webpack --env.mode=development --env.presets=html --env.presets=css --env.presets=javascript --env.presets=static --env.presets=images --env.presets=fonts"
 	},
 	"author": "Akash Mohan",
 	"license": "ISC",
