@@ -1,29 +1,30 @@
 const path = require('path')
 
 const { merge } = require('webpack-merge')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const loadPresets = require('./build-utils/loadPresets.js')
 const modeConfig = (mode) => require(`./build-utils/webpack.${mode}.js`)
 
+const publicPath = process.env.URL || 'http://localhost:8888/'
+
 module.exports = ({ mode, presets } = { mode: 'production', preset: [] }) => {
-	return merge(
+	const config = merge(
 		{
 			mode,
 			target: 'node',
-			plugins: [
-				new CleanWebpackPlugin(),
-				new MiniCssExtractPlugin({
-					filename: 'style.css',
-				}),
-			],
+			entry: {
+				home: './src/index.js',
+				// blog: './src/blog.js',
+			},
 			output: {
+				publicPath: publicPath,
 				path: path.resolve(__dirname, './dist'),
-				filename: 'js/script.js',
+				filename: 'js/[name].js',
 			},
 		},
 		modeConfig(mode),
 		loadPresets(presets)
 	)
+
+	return config
 }
