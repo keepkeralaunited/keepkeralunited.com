@@ -11,7 +11,7 @@ module.exports = ({ mode, presets } = { mode: 'production', preset: [] }) => {
 			mode,
 			target: 'node',
 			entry: {
-				home: './src/index.js',
+				script: './src/index.js',
 				// blog: './src/blog.js',
 			},
 			output: {
