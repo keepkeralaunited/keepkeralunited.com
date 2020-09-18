@@ -18,6 +18,8 @@
 		"mini-css-extract-plugin": "^0.11.0",
 		"postcss-loader": "^3.0.0",
 		"prettier": "2.1.1",
+		"pug": "^3.0.0",
+		"purgecss-webpack-plugin": "^2.3.0",
 		"rimraf": "^3.0.2",
 		"style-loader": "^1.2.1",
 		"webpack": "4.44.1",
@@ -29,7 +31,7 @@
 		"webpack": "webpack --mode=development",
 		"webpack-prod": "webpack --mode=production",
 		"build": "rimraf ./dist && webpack --env.mode=production --env.presets=html --env.presets=css --env.presets=javascript --env.presets=static --env.presets=images --env.presets=fonts --env.presets=handlebars",
-		"dev:std": "rimraf ./dist && webpack --watch --env.mode=development --env.presets=html --env.presets=css --env.presets=javascript --env.presets=static --env.presets=images --env.presets=fonts --env.presets=handlebars"
+		"dev:std": "rimraf ./dist && webpack --watch --env.mode=development --env.presets=html --env.presets=css --env.presets=javascript --env.presets=static --env.presets=images --env.presets=fonts --env.presets=pug"
 	},
 	"author": "Akash Mohan",
 	"license": "ISC",

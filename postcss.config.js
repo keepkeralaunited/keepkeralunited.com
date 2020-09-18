@@ -6,7 +6,8 @@ module.exports = {
 		// 	content: [
 		// 		'src/index.html',
 		// 		'src/blog/index.html',
-		// 		'src/blog/what-is-keep-kerala-united.html',
+		// 		'**/*.html',
+		// 		'**/*.hbs',
 		// 	],
 		// 	whitelist: ['is-active'],
 		// }),
