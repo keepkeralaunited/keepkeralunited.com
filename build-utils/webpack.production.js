@@ -3,7 +3,7 @@ function getPublicPath() {
 		return process.env.URL
 	}
 
-	return process.env.DEPLOY_URL
+	return process.env.DEPLOY_PRIME_URL
 }
 
 module.exports = {
