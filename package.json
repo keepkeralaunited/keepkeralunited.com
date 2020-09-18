@@ -30,7 +30,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"webpack": "webpack --mode=development",
 		"webpack-prod": "webpack --mode=production",
-		"build": "rimraf ./dist && webpack --env.mode=production --env.presets=html --env.presets=css --env.presets=javascript --env.presets=static --env.presets=images --env.presets=fonts --env.presets=handlebars",
+		"build": "rimraf ./dist && webpack --env.mode=production --env.presets=html --env.presets=css --env.presets=javascript --env.presets=static --env.presets=images --env.presets=fonts --env.presets=pug",
 		"dev:std": "rimraf ./dist && webpack --watch --env.mode=development --env.presets=html --env.presets=css --env.presets=javascript --env.presets=static --env.presets=images --env.presets=fonts --env.presets=pug"
 	},
 	"author": "Akash Mohan",
