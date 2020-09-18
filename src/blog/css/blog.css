@@ -51,6 +51,8 @@ body {
 .blog-post-preview {
 	/* background: #f9f8f1; */
 	height: 100%;
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 .no-underline {
@@ -64,6 +66,10 @@ body {
 	border-radius: 1rem;
 }
 
+.blog-header h1 {
+	word-break: break-word;
+}
+
 .kku-blog-description {
 	margin-top: 1rem;
 	font-style: italic;
@@ -75,4 +81,10 @@ body {
 
 .small-margin-bottom {
 	margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+	html {
+		font-size: 16px;
+	}
 }
