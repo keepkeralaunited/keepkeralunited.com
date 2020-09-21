@@ -6,7 +6,7 @@ const fileLoader = {
 	},
 }
 
-module.exports = {
+const developerConfig = {
 	module: {
 		rules: [
 			{
@@ -16,4 +16,21 @@ module.exports = {
 			},
 		],
 	},
+}
+
+const productionConfig = {
+	module: {
+		rules: [
+			{
+				test: /favicon.ico/,
+				exclude: /(node_modules)/,
+				use: [fileLoader],
+			},
+		],
+	},
+}
+
+module.exports = function getConfig(mode) {
+	if (mode == 'development') return developerConfig
+	if (mode == 'production') return productionConfig
 }

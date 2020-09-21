@@ -9,11 +9,7 @@ const fileLoader = {
 	},
 }
 
-// const PostPartial = require('../../src/blog/handlebars/partials/Post.hbs')
-
-// Handlebars.registerPartial('Post', PostPartial)
-
-const HandleBarsHtmlLoader = {
+const PugLoader = {
 	loader: 'html-loader',
 	options: {
 		attributes: {
@@ -44,14 +40,31 @@ const HandleBarsHtmlLoader = {
 	},
 }
 
-module.exports = {
+const developerConfig = {
 	module: {
 		rules: [
 			{
 				test: /\.pug$/i,
 				exclude: /node_modules/,
-				use: [fileLoader, 'extract-loader', HandleBarsHtmlLoader],
+				use: [fileLoader, 'extract-loader', PugLoader],
 			},
 		],
 	},
+}
+
+const productionConfig = {
+	module: {
+		rules: [
+			{
+				test: /\.pug$/i,
+				exclude: /node_modules/,
+				use: [fileLoader, 'extract-loader', PugLoader],
+			},
+		],
+	},
+}
+
+module.exports = function getConfig(mode) {
+	if (mode == 'development') return developerConfig
+	if (mode == 'production') return productionConfig
 }

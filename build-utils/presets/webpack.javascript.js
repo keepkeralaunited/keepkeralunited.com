@@ -5,7 +5,7 @@ const babelLoader = {
 	},
 }
 
-module.exports = {
+const developerConfig = {
 	module: {
 		rules: [
 			{
@@ -15,4 +15,21 @@ module.exports = {
 			},
 		],
 	},
+}
+
+const productionConfig = {
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules)/,
+				use: [babelLoader],
+			},
+		],
+	},
+}
+
+module.exports = function getConfig(mode) {
+	if (mode == 'development') return developerConfig
+	if (mode == 'production') return productionConfig
 }

@@ -20,7 +20,7 @@ module.exports = ({ mode, presets } = { mode: 'production', preset: [] }) => {
 			},
 		},
 		modeConfig(mode),
-		loadPresets(presets)
+		loadPresets(presets, mode)
 	)
 
 	return config
