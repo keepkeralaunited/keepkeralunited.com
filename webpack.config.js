@@ -12,7 +12,7 @@ module.exports = ({ mode, presets } = { mode: 'production', preset: [] }) => {
 			target: 'node',
 			entry: {
 				script: './src/index.js',
-				// blog: './src/blog.js',
+				loadImg: './src/img.js',
 			},
 			output: {
 				path: path.resolve(__dirname, './dist'),
@@ -20,7 +20,7 @@ module.exports = ({ mode, presets } = { mode: 'production', preset: [] }) => {
 			},
 		},
 		modeConfig(mode),
-		loadPresets(presets)
+		loadPresets(presets, mode)
 	)
 
 	return config

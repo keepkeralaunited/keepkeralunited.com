@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+    head
+
+        - let title = "Keep Kerala United | Gift Boxes To Support Struggling Small Businesses"
+        - let description = "Gift Boxes To Support Struggling Small Bussinesses"
+        - let imgUrl = "https://relaxed-wright-20a484.netlify.app/img/default-edition-min.png"
+        - let pageUrl = "https://relaxed-wright-20a484.netlify.app/"
+        - let stylesheets = ['./css/bulma.min.css', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@400;700&display=swap', './fonts/icons.css', './css/style.css']
+
+        include /components/Header.pug
+
+        style.
+
+            .has-top-margin {
+                margin-top: 2rem;
+            }
+
+            .faq-header {
+                background: ghostwhite;
+                border-radius: 1rem;
+            }
+
+            .faq-header h1{
+                font-weight: 700;
+                font-size: 1.3rem;
+                text-align: center;
+            }
+
+            .questions {
+                padding: 1rem
+            }
+
+            .is-bold {
+                font-weight: 700;
+            }
+
+            .has-narrow-top-margin {
+                margin-top: 1rem;
+            }
+
+            @media only screen and (max-width: 1024px) {
+
+                .faq-header.section {
+                    padding: 1rem;
+                }
+
+            }
+
+    body
+        .landing
+            .landing-content
+                .container.page
+                    include /components/Navbar.pug
+
+                    .columns.is-centered
+                        .column.is-half
+                            header.faq-header.section
+                                h1.faq-header
+                                    | Have any questions ?
+                            .questions.has-top-margin
+                                .faq-question
+                                    h3.is-bold
+                                        | What are the contents of the box
+                                    p.kku-paragraph.has-narrow-top-margin
+                                        | all of the products are made in Kerala. and you can see a list of products included in each box on the 
+                                        a(href="#Products") 
+                                            | box details. 
+                                .faq-question
+                                    h3.is-bold
+                                        | When will the box get delivered
+                                    p.kku-paragraph.has-narrow-top-margin
+                                        | The box will be delivered within 7 business days.
+				
+        
+        script(src="/js/script.js")
+        //- include /components/Footer.pug

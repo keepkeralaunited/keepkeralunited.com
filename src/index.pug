@@ -1,0 +1,257 @@
+include /components/mixins/ProductBox.pug
+
+doctype html
+html(lang="en")
+	head
+
+		- let title = "Keep Kerala United | Gift Boxes To Support Struggling Small Businesses"
+		- let description = "Gift Boxes To Support Struggling Small Bussinesses"
+		- let imgUrl = "https://relaxed-wright-20a484.netlify.app/img/default-edition-min.png"
+		- let pageUrl = "https://relaxed-wright-20a484.netlify.app/"
+		- let stylesheets = ['./css/bulma.min.css', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@400;700&display=swap', './fonts/icons.css', './css/style.css']
+
+		include /components/Header.pug
+	body
+		.landing
+			.landing-content
+				.container.page
+					
+					include /components/Navbar.pug
+
+					.columns.is-centered.main-content(style="margin-top: 0px")
+						.column.image-column.is-one-third-desktop
+							figure.home-image
+								picture
+									source(srcset="./img/kerala.webp" type="image/webp")
+									source(srcset="./img/kerala.png" type="image/png")
+									img.image(src="./img/kerala.png" alt="Something")
+								.image-overlay
+						.column.image-description.is-two-fifths-desktop.is-four-fifths-mobile
+							h1.hero-title
+								| Buy a gift box, and help them survive.
+							p.hero-text
+								| Covid has shattered thousands of small business
+								| dreams in Kerala. Buy one gift box and make a
+								| direct impact on their lives.
+							a.button.is-small.is-link.see-products-button(href="#Products") See Products
+		a(name="Products")
+		.products
+			.product.product-alternate.page
+				.container
+					.columns
+						.column
+							.product-section
+								h1.products-title.kku-title.kku-title-size-2
+									| ⚡ let's keep kerala together
+					.columns.is-multiline.is-centered
+						.column.is-one-third-desktop.is-three-fifths-tablet
+							
+							- let essentialsBox = {}
+							- essentialsBox.imageName = 'default-edition-min'
+							- essentialsBox.altText = 'Keep Kerala United Giftbox Essentials'
+							- essentialsBox.title = 'Keep Kerala United Giftbox'
+							- essentialsBox.tag = 'Essential'
+							- essentialsBox.items = ['Choco Cookies', 'Roasted Coffee', 'Masala Tea', 'Dry Fruites', 'Stickers', 'Pins', 'Mask', 'Body Scrubs']
+							- essentialsBox.price = 555
+							- essentialsBox.paymentLink = 'https://rzp.io/l/keepkeralaunitedboxessentials'
+							- essentialsBox.id = 'essentials'
+
+							+ProductBox( essentialsBox )
+
+						.column.is-one-third-desktop.is-three-fifths-tablet
+
+							- let babiesBox = {}
+							- babiesBox.imageName = 'babies-edition-min'
+							- babiesBox.altText = 'Keep Kerala United Giftbox For Babies'
+							- babiesBox.title = 'Keep Kerala United Giftbox'
+							- babiesBox.tag = 'For Babies'
+							- babiesBox.items = [ 'Hair accessories', 'Bowties', 'Booties', 'Banners' ]							
+							- babiesBox.price = 555
+							- babiesBox.paymentLink = 'https://rzp.io/l/keepkeralaunitedboxessentials'
+							- babiesBox.id = 'for-babies'
+
+							+ProductBox( babiesBox )
+
+							
+						.column.is-one-third-desktop.is-three-fifths-tablet
+
+							- let premiumBox = {}
+							- premiumBox.imageName = 'premium-edition-min'
+							- premiumBox.altText = 'Keep Kerala United Giftbox Premium Edition'
+							- premiumBox.title = 'Keep Kerala United Giftbox'
+							- premiumBox.tag = 'Premium'
+							- premiumBox.items = [ 'Choco Cookies', 'Rosted Coffee', 'Masala Tea', 'Dry Fruits', 'Stickers', 'Pins', 'Mask', 'Body Scrubs', 'Cards', 'Notebook', 'Pouches' ]
+							- premiumBox.price = 699
+							- premiumBox.paymentLink = 'https://rzp.io/l/keepkeralaunitedboxpremium'
+							- premiumBox.id = 'premium'
+
+							+ProductBox( premiumBox )
+							
+		a(name="WhatsInside")
+		.whats-inside.page
+			.container
+				.columns
+					.column
+						.columns
+							.column.is-half
+								.whats-inside-header
+									h1.kku-title.kku-title-size-2
+										| What's Inside
+									p.kku-paragraph
+										| You will receive a variety of products from
+										| the following categories,
+										span.kku-paragraph-lead
+											| all of which are high-quality and by
+											| local Kerala businesses:
+				.columns
+					.column.is-two-thirds
+						.columns.products-row-1
+							.product-list-column.column.is-one-third
+								h3.product-list-title.kku-title.kku-title-size-3
+									// <span class="icon"> 🍴 </span>
+									| Taste
+									span#local-taste-caret.icon.expand-icon(data-open="local-taste-product-list")
+										i.icon-caret-down
+								ul#local-taste-product-list.product-list
+									li.product-name Chocolates
+									li.product-name Cookies
+									li.product-name Sauces
+									li.product-name Spices
+							.product-list-column.column.column.is-one-third
+								h3.product-list-title.kku-title.kku-title-size-3
+									| Art
+									span#local-art-caret.icon.expand-icon
+										i.icon-caret-down
+								ul#local-art-product-list.product-list
+									li.product-name Stickers
+									li.product-name Mini Posters
+									li.product-name Pins
+									li.product-name Cards
+							.product-list-column.column.column.is-one-third
+								h3.product-list-title.kku-title.kku-title-size-3
+									| Lifestyle
+									span#local-lifestyle-caret.icon.expand-icon
+										i.icon-caret-down
+								ul#local-lifestyle-product-list.product-list
+									li.product-name Aromatherapy
+									li.product-name Coasters
+									li.product-name Tote Bag
+						.columns.products-row-2
+							.product-list-column.column.column.is-one-third
+								h3.product-list-title.kku-title.kku-title-size-3
+									| Skincare
+									span#local-skincare-caret.icon.expand-icon
+										i.icon-caret-down
+								ul#local-skincare-product-list.product-list
+									li.product-name Lotions
+									li.product-name Soaps
+									li.product-name Lip Balms
+							.product-list-column.column.column.is-one-third
+								h3.product-list-title.kku-title.kku-title-size-3
+									| Baby Items
+									span#local-baby-items-caret.icon.expand-icon
+										i.icon-caret-down  
+								ul#local-baby-items-product-list.product-list
+									li.product-name
+										| Local Baby Items
+									li.product-name
+										| Hair accessories
+									li.product-name Bowties
+									li.product-name Booties
+							.product-list-column.column.column.is-one-third
+								h3.product-list-title.kku-title.kku-title-size-3
+									| Drinks
+									span#local-drinks-caret.icon.expand-icon
+										i.icon-caret-down
+								ul#local-drinks-product-list.product-list
+									li.product-name Artisanal Tea
+									li.product-name Craft Coffee
+		
+		.people.page
+			.container
+				.columns
+					.column
+						.people-images.box
+							header.people-images-header
+								h1.people-title
+									| #keepkeralaunited
+
+							.columns.is-mobile
+								- 
+									let images = [ 
+										{ webp: 'img/faces/webp/1.webp', normal: 'img/faces/jpg/1.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/2.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/3.webp', normal: 'img/faces/jpg/3.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/4.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/5.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/6.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/7.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/8.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/9.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/10.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/11.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+									]
+
+								each image in images
+									.column.is-one-fifth-tablet.is-four-fifths-mobile
+										figure.image.is-9by16
+											img.lazy(data-src=image.normal data-webp=image.webp type=image.type)
+												
+						
+		a(name="WhyShouldICare")
+		.why-should-you-care.page
+			.container
+				.columns
+					.column.section.why-should-you-care-section
+						h1.why-should-you-care-title.kku-title.kku-title-size-2
+							| Why Should You Care
+				.columns.why-should-you-care-content
+					.column.is-half
+						.reasons.columns.is-multiline
+							.column.is-half
+								.reason
+									h3.product-list-title.kku-title.kku-title-size-3
+										| 🙌 Show Your Support
+									p.kku-paragraph
+										| Each gift box you get will help these
+										| businesses and encourage them to keep
+										| going even during these tough times.
+							.column.is-half
+								.reason
+									h3.product-list-title.kku-title.kku-title-size-3
+										span.icon(style="color: brown") ❤
+										| 										Pamper your beloved
+									p.kku-paragraph
+										| Shower your loved ones - family &
+										| friends with a surprise and add love to
+										| your relationships.
+							.column.is-half
+								.reason.kku-paragraph
+									h3.product-list-title.kku-title.kku-title-size-3
+										| 👏 Appreciate
+									p
+										| Thank your team for their hard work
+										| under difficult circumstances, with a
+										| beautiful gift set.
+							.column.is-helf
+								.reason.kku-paragraph
+									h3.product-list-title.kku-title.kku-title-size-3
+										| 💕 Spread the love
+									p
+										| Spread the love: last but not least,
+										| spread the word. together we can help.
+										| together we can make a difference.
+				.columns.the-cause-wrapper
+					.column.is-half
+						p.kku-paragraph.the-cause-description
+							| Each box contains an assortment of local goods from
+							| struggling small businesses in Kerala. The boxes are
+							| compiled with love and delicacy to spread joy to as
+							| many lives as possible. By purchasing a box you are
+							| making a direct impact on every business we are
+							| working with.
+				
+
+		include /components/Footer.pug
+		script(src="js/script.js")
+		script(src="js/loadImg.js")

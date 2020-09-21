@@ -3,6 +3,10 @@ function getPublicPath() {
 		return `${process.env.URL}/`
 	}
 
+	if (process.env.CONTEXT == 'branch-deploy') {
+		return 'https://develop.keepkeralaunited.com/'
+	}
+
 	return `${process.env.DEPLOY_PRIME_URL}/`
 }
 

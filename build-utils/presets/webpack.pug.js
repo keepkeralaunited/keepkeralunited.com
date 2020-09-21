@@ -9,11 +9,7 @@ const fileLoader = {
 	},
 }
 
-// const PostPartial = require('../../src/blog/handlebars/partials/Post.hbs')
-
-// Handlebars.registerPartial('Post', PostPartial)
-
-const HandleBarsHtmlLoader = {
+const PugLoader = {
 	loader: 'html-loader',
 	options: {
 		attributes: {
@@ -38,21 +34,37 @@ const HandleBarsHtmlLoader = {
 		},
 		preprocessor: (content, loaderContext) => {
 			return pug.render(content, {
-				name: 'Akash Mohan',
-				basedir: path.resolve(__dirname, '../../src/blog/includes'),
+				basedir: path.resolve(__dirname, '../../src/'),
 			})
 		},
 	},
 }
 
-module.exports = {
+const developerConfig = {
 	module: {
 		rules: [
 			{
 				test: /\.pug$/i,
 				exclude: /node_modules/,
-				use: [fileLoader, 'extract-loader', HandleBarsHtmlLoader],
+				use: [fileLoader, 'extract-loader', PugLoader],
 			},
 		],
 	},
+}
+
+const productionConfig = {
+	module: {
+		rules: [
+			{
+				test: /\.pug$/i,
+				exclude: /node_modules/,
+				use: [fileLoader, 'extract-loader', PugLoader],
+			},
+		],
+	},
+}
+
+module.exports = function getConfig(mode) {
+	if (mode == 'development') return developerConfig
+	if (mode == 'production') return productionConfig
 }

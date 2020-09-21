@@ -44,7 +44,7 @@ const HandleBarsHtmlLoader = {
 	},
 }
 
-module.exports = {
+const developerConfig = {
 	module: {
 		rules: [
 			{
@@ -54,4 +54,21 @@ module.exports = {
 			},
 		],
 	},
+}
+
+const productionConfig = {
+	module: {
+		rules: [
+			{
+				test: /\.hbs$/i,
+				exclude: /node_modules/,
+				use: [fileLoader, 'extract-loader', HandleBarsHtmlLoader],
+			},
+		],
+	},
+}
+
+module.exports = function getConfig(mode) {
+	if (mode == 'development') return developerConfig
+	if (mode == 'production') return productionConfig
 }
