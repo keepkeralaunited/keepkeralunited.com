@@ -11,7 +11,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(png|jpe?g|gif|webp)$/i,
-				use: [fileLoader],
+				use: [fileLoader, 'image-webpack-loader'],
 			},
 		],
 	},

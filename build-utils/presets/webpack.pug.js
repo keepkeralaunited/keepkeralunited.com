@@ -38,8 +38,7 @@ const HandleBarsHtmlLoader = {
 		},
 		preprocessor: (content, loaderContext) => {
 			return pug.render(content, {
-				name: 'Akash Mohan',
-				basedir: path.resolve(__dirname, '../../src/blog/includes'),
+				basedir: path.resolve(__dirname, '../../src/'),
 			})
 		},
 	},

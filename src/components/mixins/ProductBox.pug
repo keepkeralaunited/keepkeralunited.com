@@ -1,0 +1,25 @@
+mixin ProductBox( product )
+    - let webpPath = "./img/" + product.imageName + '.webp'
+    - let pngPath = "./img/" + product.imageName + '.png'
+    - let spanId = `${product.id}-question-circle`
+    - let targetId = `${product.id}-pack-tags`
+
+    .product-box-wrapper
+        .product-box
+            figure.image
+                picture
+                    source(srcset=webpPath type="image/webp")
+                    source(srcset=pngPath type="image/png")
+                    img(src=pngPath alt=product.altText loading="lazy")
+                figcaption
+                    h1.product-title
+                        | #{ product.title }
+                    p.tag.is-warning.product-edition
+                        | #{ product.tag }
+                        span.icon(id=spanId)
+                            i.icon-question-circle
+                    .tags(id=targetId)
+                        each item in product.items
+                            span.tag.is-black.is-light #{ item }
+                    span.price  ₹ #{ product.price }
+                    a.button.kku-button.buy-now(href= product.paymentLink) Buy Now
