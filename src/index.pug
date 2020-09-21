@@ -166,7 +166,37 @@ html(lang="en")
 								ul#local-drinks-product-list.product-list
 									li.product-name Artisanal Tea
 									li.product-name Craft Coffee
-				
+		
+		.people.page
+			.container
+				.columns
+					.column
+						.people-images.box
+							header.people-images-header
+								h1.people-title
+									| #keepkeralaunited
+
+							.columns.is-mobile
+								- 
+									let images = [ 
+										{ webp: 'img/faces/webp/1.webp', normal: 'img/faces/jpg/1.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/2.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/3.webp', normal: 'img/faces/jpg/3.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/4.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/5.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/6.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/7.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/8.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/9.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/10.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/11.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+									]
+
+								each image in images
+									.column.is-one-fifth-tablet.is-four-fifths-mobile
+										figure.image.is-9by16
+											img.lazy(data-src=image.normal data-webp=image.webp type=image.type)
+												
 						
 		a(name="WhyShouldICare")
 		.why-should-you-care.page
@@ -220,7 +250,8 @@ html(lang="en")
 							| many lives as possible. By purchasing a box you are
 							| making a direct impact on every business we are
 							| working with.
-					
+				
 
 		include /components/Footer.pug
 		script(src="js/script.js")
+		script(src="js/loadImg.js")

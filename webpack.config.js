@@ -12,7 +12,7 @@ module.exports = ({ mode, presets } = { mode: 'production', preset: [] }) => {
 			target: 'node',
 			entry: {
 				script: './src/index.js',
-				intersectionObserverPolyFill: './src/img.js',
+				loadImg: './src/img.js',
 			},
 			output: {
 				path: path.resolve(__dirname, './dist'),
