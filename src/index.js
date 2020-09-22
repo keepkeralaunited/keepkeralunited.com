@@ -32,5 +32,14 @@ require('./img/faces/webp/9.webp')
 require('./img/faces/webp/10.webp')
 require('./img/faces/webp/11.webp')
 
+require('./blog/img/the-why-of-keep-kerala-united.jpg')
+require('./blog/img/the-why-of-keep-kerala-united.webp')
+
+require('./blog/img/സഹായിക്കാം കൂടെ നിർത്താം.jpg')
+require('./blog/img/സഹായിക്കാം കൂടെ നിർത്താം.webp')
+
+require('./blog/img/വിദ്യാഭ്യാസവും-കോവിഡും.jpg')
+require('./blog/img/വിദ്യാഭ്യാസവും-കോവിഡും.webp')
+
 // load all blog posts
 require.context('./blog/posts/', false, /\.pug$/)
