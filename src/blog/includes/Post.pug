@@ -45,8 +45,12 @@ html(lang="en")
 							.post-links.small-margin-bottom
 								a(href="/blog") ⬅ Home
 							h1.kku-blog-title.no-underline #{blogTitle}
+						.blog-image
+							figure.image-placeholder.image.is-16by9
+								img.lazy(data-src=postImage data-webp=postWebp alt=altText)
 						.blog-content
 							block blogContent
+		script(src="../../js/loadImg.js")
 								
 							
 							

@@ -83,6 +83,11 @@ body {
 	margin-bottom: 1.5rem;
 }
 
+.image-placeholder {
+	background: #edf0f2;
+	margin-bottom: 1rem;
+}
+
 @media only screen and (max-width: 1024px) {
 	html {
 		font-size: 16px;
