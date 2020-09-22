@@ -2,13 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	var lazyImages = [].slice.call(document.querySelectorAll('img.lazy'))
 
 	if ('IntersectionObserver' in window) {
-		console.log('We have Intersection Observer')
-
 		let lazyImageObserver = new IntersectionObserver(function (
 			entries,
 			observer
 		) {
-			console.log(entries)
 			entries.forEach(function (entry) {
 				if (entry.isIntersecting) {
 					let lazyImage = entry.target
@@ -23,8 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 					lazyImage.classList.remove('lazy')
 					lazyImageObserver.unobserve(lazyImage)
-
-					console.log(lazyImage, 'is loading')
 				}
 			})
 		})

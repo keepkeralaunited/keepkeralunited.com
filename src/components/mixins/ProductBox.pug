@@ -1,6 +1,6 @@
 mixin ProductBox( product )
-    - let webpPath = "./img/" + product.imageName + '.webp'
-    - let pngPath = "./img/" + product.imageName + '.png'
+    - let webpPath = "./img/boxs/webp/" + product.imageName + '.webp'
+    - let normalPath = "./img/boxs/jpg/" + product.imageName + '.jpg'
     - let spanId = `${product.id}-question-circle`
     - let targetId = `${product.id}-pack-tags`
 
@@ -9,8 +9,8 @@ mixin ProductBox( product )
             figure.image
                 picture
                     source(srcset=webpPath type="image/webp")
-                    source(srcset=pngPath type="image/png")
-                    img(src=pngPath alt=product.altText loading="lazy")
+                    source(srcset=normalPath type="image/png")
+                    img(src=normalPath alt=product.altText)
                 figcaption
                     h1.product-title
                         | #{ product.title }
