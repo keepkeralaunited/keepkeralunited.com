@@ -7,7 +7,35 @@ body {
 	color: #000;
 	/* background: #0a2540; */
 }
-/* Global */
+
+/* People Photos */
+
+.people {
+	display: flex;
+	align-items: center;
+	background: #f6f9fc;
+}
+
+.people-title {
+	font-weight: bold;
+}
+
+.people-images .columns {
+	overflow-x: scroll;
+	align-items: center;
+}
+
+.people-images figure img {
+	border-radius: 0.5rem;
+}
+
+.people-images figure {
+	background: #edf0f2;
+}
+
+.people-images-header {
+	margin-bottom: 3rem;
+}
 
 .footer-actions {
 	margin-top: 0.5rem;
@@ -249,6 +277,7 @@ body {
 	margin-bottom: 0.5rem;
 }
 
+/* purgecss ignore */
 #essentials-pack-tags,
 #for-babies-pack-tags,
 #premium-pack-tags {
@@ -326,6 +355,14 @@ figure.home-image img,
 
 .hero-text {
 	margin-top: 1rem;
+}
+
+.people-images-header h1 {
+	text-align: center;
+}
+
+.product-title {
+	margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -461,5 +498,30 @@ figure.home-image img,
 
 	.navbar-brand {
 		padding-left: 0.5rem;
+	}
+
+	.people-images .columns .column {
+		padding: 0;
+		padding-right: 0.5rem;
+	}
+
+	.people-images {
+		padding: 0.5rem;
+	}
+
+	.people-images-header {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.whats-inside {
+		padding-bottom: 0;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.people-images-header {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
 	}
 }

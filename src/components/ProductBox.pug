@@ -1,0 +1,21 @@
+.product-box-wrapper
+    .product-box
+        figure
+            picture
+                - let webpPath = "./img/" + imageName + '.webp'
+                - let pngPath = "./img/" + imageName + '.png'
+                source(srcset=webpPath type="image/webp")
+                source(srcset=pngPath type="image/png")
+                img(src=pngPath alt=altText loading="lazy")
+            figcaption
+                h1.product-title
+                    | #{ productTitle }
+                p.tag.is-warning.product-edition
+                    | #{ productTag }
+                    span#essentials-question-circle.icon
+                        i.icon-question-circle
+                #essentials-pack-tags.tags
+                    each item in items
+                        span.tag.is-black.is-light #{ item }
+                span.price  ₹ #{ price }
+                a.button.kku-button.buy-now(href= paymentLink) Buy Now

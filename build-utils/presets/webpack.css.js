@@ -24,7 +24,19 @@ const postCssLoader = {
 	loader: 'postcss-loader',
 }
 
-module.exports = {
+const developerConfig = {
+	module: {
+		rules: [
+			{
+				test: /\.css$/,
+				exclude: /node_modules/,
+				use: [fileLoader, extractLoader, cssLoader],
+			},
+		],
+	},
+}
+
+const productionConfig = {
 	module: {
 		rules: [
 			{
@@ -34,4 +46,9 @@ module.exports = {
 			},
 		],
 	},
+}
+
+module.exports = function getConfig(mode) {
+	if (mode == 'development') return developerConfig
+	if (mode == 'production') return productionConfig
 }
