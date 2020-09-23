@@ -1,6 +1,6 @@
 require('./index.pug')
 require('./faq.pug')
-require('./blog/index.html')
+require('./blog/index.pug')
 require('./js/script.js')
 require('./favicon.ico')
 

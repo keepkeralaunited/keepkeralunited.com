@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        - let title = "Articles | Keep Kerala United"
+        - let description = "Read About Keep Kerala United Campaign"
+        - let imgUrl = "https://keepkeralaunited.com/img/default-edition-min.png"
+        - let pageUrl = "https://keepkeralaunited.com/"
+        - let stylesheets = ['./css/bulma.min.css', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap', './css/blog.css']
+
+        include /components/Header.pug
+    body
+
+        .container
+            .columns.is-centered.no-negetive-right-margin
+                .column.is-two-thirds
+                    .blog-posts-wrapper.section
+                        .blog-header
+                            .blog-header-links
+                                a(href="/") ⬅ back to Website 
+                            h1.kku-blog-title.no-underline
+                                | Keep Kerala United Blog
+                            .columns
+                                .column
+                                    p.kku-blog-description
+                                        | Everything you need to know about Keep
+                                        | Kerala United Campaign.
+                        .blog-post-preview
+                            h1.kku-title.kku-blog-title
+                                figure.image-placeholder.image.is-16by9
+                                    img.lazy(data-src="/blog/img/the-why-of-keep-kerala-united.jpg" data-webp="/blog/img/the-why-of-keep-kerala-united.webp" alt="The Why Of Keep Kerala United")
+                                a(href="/blog/posts/the-why-of-keep-kerala-united") The Why Of Keep Kerala United.
+                            h1.kku-title.kku-blog-title.has-top-margin
+                                figure.image-placeholder.image.is-16by9
+                                    img.lazy(data-src="/blog/img/help.jpg" data-webp="/blog/img/help.webp" alt="സഹായിക്കാം കൂടെ നിർത്താം")
+                                a(href="/blog/posts/സഹായിക്കാം-കൂടെ-നിർത്താം") സഹായിക്കാം കൂടെ നിർത്താം
+                            h1.kku-title.kku-blog-title.has-top-margin
+                                figure.image-placeholder.image.is-16by9
+                                    img.lazy(data-src="/blog/img/education and covid.jpg" data-webp="/blog/img/education and covid.webp" alt="വിദ്യാഭ്യാസവും-കോവിഡും")
+                                a(href="/blog/posts/വിദ്യാഭ്യാസവും-കോവിഡും") വിദ്യാഭ്യാസവും കോവിഡും
+        script(src="/js/loadImg.js")
