@@ -365,6 +365,72 @@ figure.home-image img,
 	margin-top: 0.5rem;
 }
 
+.giveaway {
+	background: #f5f5f5;
+	display: flex;
+}
+
+.giveaway-content {
+	background: #5c7efa;
+	color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+	height: 100%;
+}
+
+.giveaway-wrapper {
+	padding: 4.2em 2.5rem;
+}
+
+.giveaway-title {
+	font-size: 2rem;
+	line-height: 2.2rem;
+}
+
+.giveaway-title span {
+	display: block;
+}
+
+.giveaway-text {
+	margin-top: 1rem;
+	font-size: 1.3rem;
+}
+
+.giveaway-text strong {
+	color: #fff;
+}
+
+.giveaway-button {
+	cursor: pointer;
+	font-size: 1rem;
+	margin-top: 1.5rem;
+	width: 100%;
+	padding: 0.6rem;
+	background: #374886;
+	color: #fff;
+	border: 0;
+	font-weight: 700;
+}
+
+.giveaway-content .columns {
+	margin-left: 0;
+	margin-right: 0;
+	height: 100%;
+}
+
+.giveaway .section,
+.giveaway-wrapper {
+	height: 100%;
+}
+
+.giveaway h1 {
+	font-weight: 700;
+}
+
+.columns {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 @media only screen and (max-width: 1024px) {
 	.kku-title-size-1 {
 		font-size: 1.6rem;
@@ -523,5 +589,9 @@ figure.home-image img,
 	.people-images-header {
 		font-size: 1.4rem;
 		margin-bottom: 1rem;
+	}
+
+	.giveaway-right {
+		margin-left: 2rem;
 	}
 }
