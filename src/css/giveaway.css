@@ -4,6 +4,7 @@ body {
 }
 html {
 	font-size: 12px;
+	scroll-behavior: smooth;
 }
 
 button {
@@ -36,10 +37,16 @@ button {
 .giveaway-button {
 	padding: 1rem 2rem;
 	border-radius: 0.5rem;
+	font-size: 1.5rem;
+	cursor: pointer;
 }
 
 .giveaway-button:hover {
 	background: #dedcdc;
+}
+
+.giveaway-button a {
+	color: #000;
 }
 
 .giveaway-winnings-item-column {
@@ -146,15 +153,24 @@ button {
 
 @media only screen and (max-width: 1024px) {
 	.giveaway-wrapper {
-		padding: 1rem;
+		padding: 2rem;
 	}
 	.giveaway-hero-wrapper {
 		margin-top: 0;
+		border-radius: 0;
+		margin-left: -2rem;
+		margin-right: -2rem;
+		margin-top: -2rem;
+		padding-bottom: 2rem;
 	}
 
 	.giveaway-hero-left,
 	.giveaway-hero-right {
 		justify-content: center;
+	}
+
+	.giveaway-hero-right {
+		display: none;
 	}
 
 	.hero-side-image {
