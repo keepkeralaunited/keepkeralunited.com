@@ -12,6 +12,18 @@ html(lang="en")
 
 		include /components/Header.pug
 	body
+
+		.bottom-message#bottom-message
+			.bottom-message-content
+				.text
+					| 🎁 We are giving away prizes 
+					strong worth 5 Lakhs.
+				.cta
+					a.bottom-message-button(href="/giveaway")
+						| Know More
+			.close
+				a#close-giveaway-message.delete
+
 		.landing
 			.landing-content
 				.container.page
