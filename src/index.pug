@@ -28,6 +28,15 @@ html(lang="en")
 			.landing-content
 				.container.page
 					
+					- 
+						const navbarLinks = [
+							{ link: '#WhyShouldICare', title: 'Why Should I Care' },
+							{ link: '#Products', title: 'Gift Boxes' },
+							{ link: '#WhatsInside', 'title': "Whats Inside" },
+							{ link: '/blog', title: 'Blog' },
+							{ link: '/faq', title: 'FAQ' }
+						]
+
 					include /components/Navbar.pug
 
 					.columns.is-centered.main-content(style="margin-top: 0px")
@@ -217,7 +226,7 @@ html(lang="en")
 				.columns
 					.column.section.why-should-you-care-section
 						h1.why-should-you-care-title.kku-title.kku-title-size-2
-							| Why Should You Care
+							| Our Vision
 				.columns.why-should-you-care-content
 					.column.is-half
 						.reasons.columns.is-multiline
