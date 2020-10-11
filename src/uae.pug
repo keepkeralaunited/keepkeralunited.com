@@ -12,18 +12,6 @@ html(lang="en")
 
 		include /components/Header.pug
 	body
-
-		.bottom-message#bottom-message
-			.bottom-message-content
-				.text
-					| 🎁 We are giving away prizes 
-					strong worth 5 Lakhs.
-				.cta
-					a.bottom-message-button(href="/giveaway")
-						| Know More
-			.close
-				a#close-giveaway-message.delete
-
 		.landing
 			.landing-content
 				.container.page
@@ -31,22 +19,22 @@ html(lang="en")
 					include /components/Navbar.pug
 
 					.columns.is-centered.main-content(style="margin-top: 0px")
-						.column.image-column.is-one-third-desktop
-							figure.home-image
-								picture
-									source(srcset="./img/kerala.webp" type="image/webp")
-									source(srcset="./img/kerala.png" type="image/png")
-									img.image(src="./img/kerala.png" alt="Something")
-								.image-overlay
 						.column.image-description.is-two-fifths-desktop.is-four-fifths-mobile
 							h1.hero-title
-								| Buy a gift box, and help them survive.
+								| UAE Stands with Kerala
 							p.hero-text
-								| Covid has shattered thousands of small business
-								| dreams in Kerala. Buy one gift box and make a
-								| direct impact on their lives. 
+								| Keep Kerala United is extending to UAE to get support from malayalees living in UAE. 
 							a.button.is-small.is-link.see-products-button(href="#Products") See Products
+						.column.image-column.is-half-desktop
+							figure.home-image
+								picture
+									source(srcset="./img/uae.webp" type="image/webp")
+									source(srcset="./img/uae.png" type="image/png")
+									img.image(src="./img/uae.png" alt="Something")
+								.image-overlay
 		
+		include /components/HomePageGiveAway.pug
+
 		a(name="Products")
 		.products
 			.product.product-alternate.page
@@ -99,6 +87,22 @@ html(lang="en")
 							- premiumBox.id = 'premium'
 	
 							+ProductBox( premiumBox )
+						
+						//- .column.is-one-third-desktop.is-three-fifths-tablet
+						//- 	- 
+						//- 		let uaeBox = {
+						//- 			imageName: 'mask',
+						//- 			altText: 'UAE Edition',
+						//- 			title: 'Keep Kerala United Box',
+						//- 			tag: 'UAE',
+						//- 			items: [ 'Choco Cookies', 'Rosted Coffee', 'Mask', 'Body Scrubs', 'Lip Scrubs' ],
+						//- 			imageName: 'UAE Edition',
+						//- 			price: 699,
+						//- 			paymentLink: 'https://rzp.io/l/keepkeralaunitedboxpremium',
+						//- 			id: 'uae-edition'
+						//- 		}
+	
+						//- 	+ProductBox( uaeBox )	
 							
 		a(name="WhatsInside")
 		.whats-inside.page

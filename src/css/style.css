@@ -8,6 +8,48 @@ body {
 	/* background: #0a2540; */
 }
 
+.bottom-message {
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+	background: #165fdc;
+	color: #fff;
+	width: 100%;
+	padding: 20px;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.bottom-message-button {
+	background: #fff;
+	color: #000;
+	padding: 0.3rem 1rem;
+	border-radius: 0.1rem;
+	margin-left: 1rem;
+	font-weight: 700;
+}
+
+.bottom-message-button:hover {
+	background: #fafafa;
+}
+
+.bottom-message .text {
+	color: #fff;
+	font-size: 0.7rem;
+	margin-left: auto;
+}
+
+.bottom-message strong {
+	color: #fff;
+}
+
+.bottom-message .close {
+	margin-left: auto;
+}
+
 /* People Photos */
 
 .people {
@@ -365,6 +407,112 @@ figure.home-image img,
 	margin-top: 0.5rem;
 }
 
+.giveaway {
+	background: #f5f5f5;
+	display: flex;
+}
+
+.giveaway-content {
+	background: #5c7efa;
+	color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+	height: 100%;
+}
+
+.giveaway-wrapper {
+	padding: 4.2em 2.5rem;
+}
+
+.giveaway-title {
+	font-size: 2rem;
+	line-height: 2.2rem;
+}
+
+.giveaway-title span {
+	display: block;
+}
+
+.giveaway-text {
+	margin-top: 1rem;
+	font-size: 1.3rem;
+}
+
+.giveaway-text strong {
+	color: #fff;
+}
+
+.giveaway-button {
+	cursor: pointer;
+	font-size: 1rem;
+	margin-top: 1.5rem;
+	width: 100%;
+	padding: 0.6rem;
+	background: #374886;
+	color: #fff;
+	border: 0;
+	font-weight: 700;
+}
+
+.giveaway-content .columns {
+	margin-left: 0;
+	margin-right: 0;
+	height: 100%;
+}
+
+.giveaway .section,
+.giveaway-wrapper {
+	height: 100%;
+}
+
+.giveaway h1 {
+	font-weight: 700;
+}
+
+.columns {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	.bottom-message {
+		padding: 12px;
+		padding-bottom: 1rem;
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: flex-start;
+	}
+
+	.bottom-message-content {
+		margin-left: auto;
+	}
+
+	.bottom-message .text {
+		margin-top: 0.5rem;
+		/* order: 2; */
+	}
+
+	.bottom-message .cta {
+		margin-top: 1rem;
+	}
+
+	.cta a {
+		width: 100%;
+		margin: 0;
+		display: inline-block;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.bottom-message-content {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+	}
+}
+
 @media only screen and (max-width: 1024px) {
 	.kku-title-size-1 {
 		font-size: 1.6rem;
@@ -523,5 +671,9 @@ figure.home-image img,
 	.people-images-header {
 		font-size: 1.4rem;
 		margin-bottom: 1rem;
+	}
+
+	.giveaway-right {
+		margin-left: 2rem;
 	}
 }

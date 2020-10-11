@@ -1,0 +1,13 @@
+mixin WinningsItem( item )
+
+    - let imageUrl = "./img/giveaway/winnings/" + item.image
+
+    .winnings-item.columns.has-no-negetive-margins.is-mobile
+        .winnings-item-left.column.is-one-third
+            figure.image
+                img(src=imageUrl)
+        .winnings-item-right
+            h3.winnings-item-name.is-bold.is-medium
+                | #{ item.name }
+            h3.winnings-item-worth.is-bold.is-small
+                | Worth #{ item.worth } INR
