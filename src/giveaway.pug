@@ -1,0 +1,81 @@
+include /components/mixins/WinningsItem.pug
+
+doctype html
+html(lang="en")
+	head
+		- let title = "Win Prices Worth 5 Lacks | Keep Kerala United Giveaway"
+		- let description = "Win Prices Worth 5 Lacks When You Buy A Keep Kerala United Box"
+		- let imgUrl = "https://relaxed-wright-20a484.netlify.app/img/default-edition-min.png"
+		- let pageUrl = "https://relaxed-wright-20a484.netlify.app/"
+		- let stylesheets = ['./css/bulma.min.css', './css/giveaway.css', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@400;700&display=swap']
+
+		include /components/Header.pug
+	body
+		.container
+			.giveaway-wrapper
+				.giveaway-hero-wrapper
+					.columns.has-no-negetive-margins.is-centered
+						.column.has-no-negetive-margins.is-one-fifth.giveaway-hero-left
+							figure.hero-side-image
+								img(src="./img/giveaway/hero/hero-image1.png")
+						.column.is-half.is-aligned-center.giveaway-hero-main
+							.giveaway-content
+								h1.giveaway-title.is-big.is-bold.is-white
+									| Celebrate Small Businesses
+								p.giveaway-paragraph.is-medium.is-white.has-medium-top-margin
+									| When you buy a Keep Kerala United Box, 
+									| You are enrolling yourself to win prices worth 5 Lakhs 
+									| while helping Small Businesses across Kerala 
+								a.button.giveaway-button.has-large-top-margin.is-bold(href="#GiveawayWinnings")
+									| What will you win
+						.column.is-one-fifth.giveaway-hero-right
+							figure.hero-side-image
+								img(src="./img/giveaway/hero/hero-image2.png")
+
+				a(name="GiveawayWinnings")
+				.giveaway-winnings.has-large-top-margin
+					.giveaway-winnings-header
+						h1.winnings-title.is-bold.is-big.is-aligned-center
+							| Winnings
+					.giveaway-winnings-body.has-large-top-margin
+						.columns.is-multiline
+							-
+								let items = [
+									{ name: 'One Plus 8 Pro', worth: '50,000', image: 'oneplus.png' },
+									{ name: 'Samsung Galaxy Tab S7', worth: '64,000', image: 'samsung_tab.png' },
+									{ name: 'Amazon Echo', worth: '7,449', image: 'amazon_echo.png' },
+									{ name: 'Amazon Kindle', worth: '7,999', image: 'amazon_kindle.png' },
+									{ name: 'Mi Powerbank 10,000 mAh', worth: '899', image: 'mi_powerbank.png' },
+									{ name: '1 Year Subscription', worth: '9,588', image: 'netflix.png'  },
+									{ name: '1 Year Subscription', worth: '1,499', image: 'disney.png' },
+									{ name: '1 Year Subscription', worth: '999', image: 'amazon_prime.png'  },
+								]
+
+							each item in items
+								.column.is-half.giveaway-winnings-item-column
+									+WinningsItem( item )
+									
+					.giveaway-message-wrapper.has-seperator-top-margin
+						.columns.is-centered
+							.column.is-one-third
+								.giveaway-message.has-large-padding
+									p.is-small.is-bold.is-aligned-center
+										| More Exciting Prices Will Be Added As The Campaign Progresses. Stay Tuned.
+					.how-to-enter-wrapper.has-seperator-top-margin
+						.columns.is-centered
+							.column.is-two-fifths
+								.how-to-enter
+									h1.winnings-title.is-bold.is-big.is-aligned-center
+										| How To Enter
+									.how-to-enter-step.has-medium-top-margin.has-large-padding
+										h3.is-medium.is-bold
+											| Step 1
+										p.is-medium.has-medium-top-margin
+											| Buy A Keep Kerala United Giftbox.
+										p.is-medium.is-bold
+											| That's It. You're enrolled.
+									a.button.giveaway-button.has-no-border.is-fullwidth-button.is-blue-button.has-large-top-margin.is-bold(href="/#Products")
+										| Enter Now
+		.giveaway-footer.has-large-padding.has-seperator-top-margin
+			footer.is-small
+				| Keep Kerala United

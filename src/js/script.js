@@ -2,6 +2,14 @@ let isMenuVisible = false
 let navbarMenu = document.querySelector('#kku-navbar-menu')
 
 document
+	.getElementById('close-giveaway-message')
+	.addEventListener('click', function removeMessage() {
+		console.log('Okkey We are running new')
+		console.log(document.getElementById('bottom-message'))
+		document.getElementById('bottom-message').style.display = 'none'
+	})
+
+document
 	.querySelector('#navbar-menu-button')
 	.addEventListener('click', function addActiveMenuClass() {
 		isMenuVisible = !isMenuVisible

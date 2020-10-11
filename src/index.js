@@ -1,5 +1,7 @@
 require('./index.pug')
 require('./faq.pug')
+require('./uae.pug')
+require('./giveaway.pug')
 require('./blog/index.pug')
 require('./js/script.js')
 require('./favicon.ico')

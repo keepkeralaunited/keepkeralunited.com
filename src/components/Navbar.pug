@@ -9,7 +9,13 @@ nav.navbar(role="navigation" aria-label="main navigation")
             span(aria-hidden="true")
     #kku-navbar-menu.navbar-menu
         .navbar-end
-
-            each link in navbarLinks 
-                a.navbar-item(href=link.link)
-                    | #{link.title}
+            a.navbar-item(href="#WhyShouldICare")
+                | Why Should I Care
+            a.navbar-item(href="#Products")
+                | Gift Boxes
+            a.navbar-item(href="#WhatsInside")
+                | What's Inside
+            a.navbar-item(href="/blog")  Blog
+            a.navbar-item(href="/faq")  FAQ
+            a.navbar-item(href="/giveaway")
+                | Give Away 🎁
