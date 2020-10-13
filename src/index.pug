@@ -65,34 +65,7 @@ html(lang="en")
 							.product-section
 								h1.products-title.kku-title.kku-title-size-2
 									| ⚡ let's keep kerala together
-					.columns.is-multiline.is-centered
-
-						.column.is-one-quarter-desktop.is-three-fifths-tablet
-							
-							- let biriyani = {}
-							- biriyani.imageName = 'biriyani'
-							- biriyani.altText = 'Sajnas Biriyani'
-							- biriyani.title = 'Sajnas Biriyani'
-							- biriyani.tag = null
-							- biriyani.items = []
-							- biriyani.price = "60 + ₹40 ( Delivery Charge )"
-							- biriyani.paymentLink = 'https://rzp.io/l/keepkeralaunitedsajnabiriyani'
-							- biriyani.id = 'essentials'
-
-							+ProductBox( biriyani )
-
-						.column.is-one-quarter-desktop.is-three-fifths-tablet
-							
-							- let supportSujina = {}
-							- supportSujina.imageName = 'SajnaBox'
-							- supportSujina.altText = 'Support Sajna Box'
-							- supportSujina.title = 'Support Sajna Box'
-							- supportSujina.items = []
-							- supportSujina.price = 499
-							- supportSujina.paymentLink = 'https://rzp.io/l/keepkeralaunitedsajnabiriyani'
-							- supportSujina.id = 'essentials'
-
-							+ProductBox( supportSujina )
+					.columns.is-multiline
 
 						.column.is-one-quarter-desktop.is-three-fifths-tablet
 							
@@ -136,6 +109,34 @@ html(lang="en")
 							- premiumBox.id = 'premium'
 	
 							+ProductBox( premiumBox )
+
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
+							
+							- let biriyani = {}
+							- biriyani.imageName = 'biriyani'
+							- biriyani.altText = 'Sajnas Biriyani / Meals'
+							- biriyani.title = 'Sajnas Biriyani / Meals'
+							- biriyani.tag = null
+							- biriyani.items = []
+							- biriyani.price = "60 + ₹40 ( Delivery Charge )"
+							- biriyani.paymentLink = 'https://rzp.io/l/keepkeralaunitedsajnabiriyani'
+							- biriyani.id = 'essentials'
+							- biriyani.extraDetails = 'Timings are from 11 AM - 2 PM and you can only order within Kochi.'
+
+							+ProductBox( biriyani )
+
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
+							
+							- let supportSujina = {}
+							- supportSujina.imageName = 'SajnaBox'
+							- supportSujina.altText = 'Support Sajna Box'
+							- supportSujina.title = 'Support Sajna Box'
+							- supportSujina.items = []
+							- supportSujina.price = 499
+							- supportSujina.paymentLink = 'https://rzp.io/l/keepkeralaunitedsajnabiriyani'
+							- supportSujina.id = 'essentials'
+
+							+ProductBox( supportSujina )
 							
 		a(name="WhatsInside")
 		.whats-inside.page
@@ -232,14 +233,15 @@ html(lang="en")
 										{ webp: 'img/faces/webp/1.webp', normal: 'img/faces/jpg/1.jpg', type: 'image/jpeg' },
 										{ webp: 'img/faces/webp/2.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
 										{ webp: 'img/faces/webp/3.webp', normal: 'img/faces/jpg/3.jpg', type: 'image/jpeg' },
-										{ webp: 'img/faces/webp/4.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
-										{ webp: 'img/faces/webp/5.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
-										{ webp: 'img/faces/webp/6.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
-										{ webp: 'img/faces/webp/7.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
-										{ webp: 'img/faces/webp/8.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
-										{ webp: 'img/faces/webp/9.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
-										{ webp: 'img/faces/webp/10.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
-										{ webp: 'img/faces/webp/11.webp', normal: 'img/faces/jpg/2.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/4.webp', normal: 'img/faces/jpg/4.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/5.webp', normal: 'img/faces/jpg/5.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/6.webp', normal: 'img/faces/jpg/6.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/7.webp', normal: 'img/faces/jpg/7.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/8.webp', normal: 'img/faces/jpg/8.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/9.webp', normal: 'img/faces/jpg/9.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/10.webp', normal: 'img/faces/jpg/10.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/11.webp', normal: 'img/faces/jpg/11.jpg', type: 'image/jpeg' },
+										{ webp: 'img/faces/webp/12.webp', normal: 'img/faces/jpg/12.jpg', type: 'image/jpeg' },
 									]
 
 								each image in images

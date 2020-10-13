@@ -27,5 +27,10 @@ mixin ProductBox( product )
                             .tags(id=targetId)
                                 each item in product.items
                                     span.tag.is-black.is-light #{ item }
-                        span.price  ₹ #{ product.price }
+                        span.price.has-top-margin.has-bottom-margin  ₹ #{ product.price }
+
+                        if product.extraDetails
+                            p.extra-details.has-top-margin.has-bottom-margin
+                                | #{ product.extraDetails }
+
                     a.button.kku-button.buy-now(href= product.paymentLink) Buy Now
