@@ -12,14 +12,20 @@ mixin ProductBox( product )
                     source(srcset=normalPath type="image/png")
                     img(src=normalPath alt=product.altText)
                 figcaption
-                    h1.product-title
-                        | #{ product.title }
-                    p.tag.is-warning.product-edition
-                        | #{ product.tag }
-                        span.icon(id=spanId)
-                            i.icon-question-circle
-                    .tags(id=targetId)
-                        each item in product.items
-                            span.tag.is-black.is-light #{ item }
-                    span.price  ₹ #{ product.price }
+                    .product-details
+                        h1.product-title
+                            | #{ product.title }
+                        if product.tag
+                            p.tag.is-warning.product-edition
+                                | #{ product.tag }
+                        
+                                if product.items.length > 0
+                                    span.icon(id=spanId)
+                                        i.icon-question-circle
+                        
+                        if product.items.length > 0
+                            .tags(id=targetId)
+                                each item in product.items
+                                    span.tag.is-black.is-light #{ item }
+                        span.price  ₹ #{ product.price }
                     a.button.kku-button.buy-now(href= product.paymentLink) Buy Now

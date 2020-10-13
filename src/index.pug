@@ -66,7 +66,35 @@ html(lang="en")
 								h1.products-title.kku-title.kku-title-size-2
 									| ⚡ let's keep kerala together
 					.columns.is-multiline.is-centered
-						.column.is-one-third-desktop.is-three-fifths-tablet
+
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
+							
+							- let biriyani = {}
+							- biriyani.imageName = 'biriyani'
+							- biriyani.altText = 'Sajnas Biriyani'
+							- biriyani.title = 'Sajnas Biriyani'
+							- biriyani.tag = null
+							- biriyani.items = []
+							- biriyani.price = "60 + ₹40 ( Delivery Charge )"
+							- biriyani.paymentLink = 'https://rzp.io/l/keepkeralaunitedsajnabiriyani'
+							- biriyani.id = 'essentials'
+
+							+ProductBox( biriyani )
+
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
+							
+							- let supportSujina = {}
+							- supportSujina.imageName = 'SajnaBox'
+							- supportSujina.altText = 'Support Sajna Box'
+							- supportSujina.title = 'Support Sajna Box'
+							- supportSujina.items = []
+							- supportSujina.price = 499
+							- supportSujina.paymentLink = 'https://rzp.io/l/keepkeralaunitedsajnabiriyani'
+							- supportSujina.id = 'essentials'
+
+							+ProductBox( supportSujina )
+
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
 							
 							- let essentialsBox = {}
 							- essentialsBox.imageName = 'essentials'
@@ -80,7 +108,7 @@ html(lang="en")
 
 							+ProductBox( essentialsBox )
 
-						.column.is-one-third-desktop.is-three-fifths-tablet
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
 
 							- let babiesBox = {}
 							- babiesBox.imageName = 'mask'
@@ -95,7 +123,7 @@ html(lang="en")
 							+ProductBox( babiesBox )
 
 							
-						.column.is-one-third-desktop.is-three-fifths-tablet
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
 
 							- let premiumBox = {}
 							- premiumBox.imageName = 'premium'

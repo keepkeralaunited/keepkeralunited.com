@@ -326,6 +326,32 @@ body {
 	display: none;
 }
 
+.product-box figure {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.product-box-wrapper {
+	height: 100%;
+}
+
+.product-box {
+	display: flex;
+	height: 100%;
+}
+
+.product-box figure figcaption {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.product-box figure figcaption a {
+	margin-top: auto;
+}
+
 .tags {
 	margin: 0.5rem 0 !important;
 }
