@@ -51,14 +51,6 @@ html(lang="en")
         .landing
             .landing-content
                 .container.page
-                    - 
-                        const navbarLinks = [
-                            { link: '/#WhyShouldICare', title: 'Why Should I Care' },
-                            { link: '/#Products', title: 'Gift Boxes' },
-                            { link: '/#WhatsInside', 'title': "Whats Inside" },
-                            { link: '/blog', title: 'Blog' },
-                            { link: '/faq', title: 'FAQ' }
-                        ]
 
                     include /components/Navbar.pug
 
@@ -70,14 +62,14 @@ html(lang="en")
                             .questions.has-top-margin
                                 .faq-question
                                     h3.is-bold
-                                        | What are the contents of the box
+                                        | What are the contents of the box?
                                     p.kku-paragraph.has-narrow-top-margin
                                         | all of the products are made in Kerala. and you can see a list of products included in each box on the 
-                                        a(href="#Products") 
+                                        a(href="/#Products") 
                                             | box details. 
                                 .faq-question
                                     h3.is-bold
-                                        | When will the box get delivered
+                                        | When will the box get delivered?
                                     p.kku-paragraph.has-narrow-top-margin
                                         | The box will be delivered within 7 business days.
                                 .faq-question
@@ -110,3 +102,16 @@ html(lang="en")
                                         | How long does the delivery take?
                                     p.kku-paragraph.has-narrow-top-margin 
                                         | The boxes will be delivered within 7 business days. We deliver all over Kerala as well as in UAE.
+        script.
+            let isMenuVisible = false
+            let navbarMenu = document.querySelector('#kku-navbar-menu')
+            document
+            .querySelector('#navbar-menu-button')
+            .addEventListener('click', function addActiveMenuClass() {
+                isMenuVisible = !isMenuVisible
+                if (isMenuVisible) {
+                    navbarMenu.classList.add('is-active')
+                } else {
+                    navbarMenu.classList.remove('is-active')
+                }
+            })
