@@ -68,7 +68,7 @@ body {
 }
 
 .people-images figure img {
-	border-radius: 0.5rem;
+	border-radius: 0.2rem;
 }
 
 .people-images figure {
@@ -204,9 +204,6 @@ body {
 	display: flex;
 	align-items: center;
 }
-.product .container .columns {
-	justify-content: center;
-}
 .level-item {
 	flex-shrink: 1;
 }
@@ -324,6 +321,44 @@ body {
 #for-babies-pack-tags,
 #premium-pack-tags {
 	display: none;
+}
+
+.product-box figure {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.product-box-wrapper {
+	height: 100%;
+}
+
+.product-box {
+	display: flex;
+	height: 100%;
+}
+
+.extra-details {
+	font-size: 0.7rem;
+}
+
+.has-top-margin {
+	margin-top: 0.5rem;
+}
+
+.has-bottom-margin {
+	margin-bottom: 0.5rem;
+}
+
+.product-box figure figcaption {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.product-box figure figcaption a {
+	margin-top: auto;
 }
 
 .tags {
