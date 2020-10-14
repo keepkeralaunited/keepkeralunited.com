@@ -55,7 +55,6 @@ html(lang="en")
 								| dreams in Kerala. Buy one gift box and make a
 								| direct impact on their lives. 
 							a.button.is-small.is-link.see-products-button(href="#Products") See Products
-		
 		a(name="Products")
 		.products
 			.product.product-alternate.page
@@ -66,6 +65,35 @@ html(lang="en")
 								h1.products-title.kku-title.kku-title-size-2
 									| ⚡ let's keep kerala together
 					.columns.is-multiline
+
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
+							
+							- let biriyani = {}
+							- biriyani.imageName = 'biriyani'
+							- biriyani.altText = 'Sajnas Biriyani / Meals'
+							- biriyani.title = 'Sajnas Biriyani / Meals'
+							- biriyani.tag = null
+							- biriyani.items = []
+							- biriyani.price = "60 + ₹40 ( Delivery Charge )"
+							- biriyani.paymentLink = 'https://rzp.io/l/keepkeralaunitedsajnabiriyani'
+							- biriyani.id = 'essentials'
+							- biriyani.extraDetails = 'Timings are from 11 AM - 2 PM and you can only order within Kochi.'
+
+							+ProductBox( biriyani )
+
+						.column.is-one-quarter-desktop.is-three-fifths-tablet
+							
+							- let supportSujina = {}
+							- supportSujina.imageName = 'SajnaBox'
+							- supportSujina.altText = 'Support Sajna Box'
+							- supportSujina.title = 'Support Sajna Box'
+							- supportSujina.items = []
+							- supportSujina.price = 499
+							- supportSujina.paymentLink = 'https://pages.razorpay.com/supportsajnabox'
+							- supportSujina.id = 'essentials'
+							- supportSujina.extraDetails = 'Free Delivery. Package will be delivered in 7 days. Includes Masks, Wild Honey, Nuts, Coffee Powder, Masala Powder, Cookies.'
+
+							+ProductBox( supportSujina )
 
 						.column.is-one-quarter-desktop.is-three-fifths-tablet
 							
@@ -110,33 +138,7 @@ html(lang="en")
 	
 							+ProductBox( premiumBox )
 
-						.column.is-one-quarter-desktop.is-three-fifths-tablet
-							
-							- let biriyani = {}
-							- biriyani.imageName = 'biriyani'
-							- biriyani.altText = 'Sajnas Biriyani / Meals'
-							- biriyani.title = 'Sajnas Biriyani / Meals'
-							- biriyani.tag = null
-							- biriyani.items = []
-							- biriyani.price = "60 + ₹40 ( Delivery Charge )"
-							- biriyani.paymentLink = 'https://rzp.io/l/keepkeralaunitedsajnabiriyani'
-							- biriyani.id = 'essentials'
-							- biriyani.extraDetails = 'Timings are from 11 AM - 2 PM and you can only order within Kochi.'
-
-							+ProductBox( biriyani )
-
-						.column.is-one-quarter-desktop.is-three-fifths-tablet
-							
-							- let supportSujina = {}
-							- supportSujina.imageName = 'SajnaBox'
-							- supportSujina.altText = 'Support Sajna Box'
-							- supportSujina.title = 'Support Sajna Box'
-							- supportSujina.items = []
-							- supportSujina.price = 499
-							- supportSujina.paymentLink = 'https://pages.razorpay.com/supportsajnabox'
-							- supportSujina.id = 'essentials'
-
-							+ProductBox( supportSujina )
+						
 							
 		a(name="WhatsInside")
 		.whats-inside.page
